@@ -1,0 +1,12 @@
+name: ethereum_address
+description: Ethereum Address library for Dart
+version: 0.0.1
+homepage: https://github.com/petejkim/dart-ethereum_address
+
+environment:
+  sdk: ">=2.0.0 <3.0.0"
+
+dependencies:
+
+dev_dependencies:
+  test: ^1.9.4
