@@ -1,6 +1,6 @@
 name: ethereum_address
-description: Ethereum Address library for Dart
-version: 1.0.0
+description: A dart library to generate, checksum, and validate Ethereum addresses
+version: 1.0.1
 homepage: https://github.com/petejkim/dart-ethereum_address
 
 environment:

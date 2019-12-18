@@ -6,10 +6,12 @@
 import "package:convert/convert.dart" show hex;
 import "package:ethereum_address/ethereum_address.dart";
 
-final publicKey = hex.decode("028a8c59fa27d1e0f1643081ff80c3cf0392902acbf76ab0dc9c414b8d115b0ab3");
+final publicKey = hex.decode(
+  "028a8c59fa27d1e0f1643081ff80c3cf0392902acbf76ab0dc9c414b8d115b0ab3",
+);
 
 // Derives an Ethereum address from a given public key.
-ethereumAddressFromPublicKey(hex.decode(publicKey));
+ethereumAddressFromPublicKey(publicKey);
 // => "0xD11A13f484E2f2bD22d93c3C3131f61c05E876a9"
 
 // Converts an Ethereum address to a checksummed address (EIP-55).
