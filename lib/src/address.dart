@@ -9,7 +9,7 @@ import "util.dart";
 /// Derives an Ethereum address from a given public key.
 String ethereumAddressFromPublicKey(Uint8List publicKey) {
   final decompressedPubKey = decompressPublicKey(publicKey);
-  final hash = SHA3Digest(256, true).process(decompressedPubKey.sublist(1));
+  final hash = SHA3Digest(256).process(decompressedPubKey.sublist(1));
   final address = hash.sublist(12, 32);
 
   return checksumEthereumAddress(hex.encode(address));
@@ -23,7 +23,7 @@ String checksumEthereumAddress(String address) {
 
   final addr = strip0x(address).toLowerCase();
   final hash = ascii.encode(hex.encode(
-    SHA3Digest(256, true).process(ascii.encode(addr)),
+    SHA3Digest(256).process(ascii.encode(addr)),
   ));
 
   var newAddr = "0x";
