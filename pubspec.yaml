@@ -4,11 +4,11 @@ version: 1.0.1
 homepage: https://github.com/petejkim/dart-ethereum_address
 
 environment:
-  sdk: ">=2.2.2 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   convert: ^3.0.0
-  pointycastle: ^2.0.1
+  pointycastle: ^3.0.1
 
 dev_dependencies:
   test: ^1.9.4

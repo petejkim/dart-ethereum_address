@@ -11,7 +11,7 @@ final publicKey = hex.decode(
 );
 
 // Derives an Ethereum address from a given public key.
-ethereumAddressFromPublicKey(publicKey);
+ethereumAddressFromPublicKey(Uint8List.fromList(hex.decode(publicKey)),);
 // => "0xD11A13f484E2f2bD22d93c3C3131f61c05E876a9"
 
 // Converts an Ethereum address to a checksummed address (EIP-55).

@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import "package:convert/convert.dart" show hex;
 import "package:ethereum_address/ethereum_address.dart";
 
@@ -7,7 +9,7 @@ void main() {
   );
 
   // Derives an Ethereum address from a given public key.
-  print(ethereumAddressFromPublicKey(publicKey));
+  print(ethereumAddressFromPublicKey(Uint8List.fromList(publicKey)));
 
   // Converts an Ethereum address to a checksummed address (EIP-55).
   print(checksumEthereumAddress("0x5aaeb6053f3e94c9b9a09f33669435e7ef1beaed"));
