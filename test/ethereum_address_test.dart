@@ -42,7 +42,9 @@ void main() {
             "0x0000de016A766eA5dE351835912b92696225f916"
       }).forEach((publicKey, address) {
         expect(
-          ethereumAddressFromPublicKey(hex.decode(publicKey) as Uint8List),
+          ethereumAddressFromPublicKey(
+            Uint8List.fromList(hex.decode(publicKey)),
+          ),
           equals(address),
         );
       });
