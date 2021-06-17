@@ -82,6 +82,7 @@ void main() {
         "5aaeb6053f3e94c9b9a09f33669435e7ef1beae",
         "5aaeb6053f3e94c9b9a09f33669435e7ef1beaedf",
       ].forEach((address) {
+        print('address $address');
         expect(
           () => checksumEthereumAddress(address),
           throwsA(
