@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import "package:convert/convert.dart" show hex;
 import "package:ethereum_address/ethereum_address.dart";
 import "package:test/test.dart";
@@ -18,7 +20,9 @@ void main() {
             "0x0000de016A766eA5dE351835912b92696225f916"
       }).forEach((publicKey, address) {
         expect(
-          ethereumAddressFromPublicKey(hex.decode(publicKey)),
+          ethereumAddressFromPublicKey(
+            Uint8List.fromList(hex.decode(publicKey)),
+          ),
           equals(address),
         );
       });
@@ -38,7 +42,9 @@ void main() {
             "0x0000de016A766eA5dE351835912b92696225f916"
       }).forEach((publicKey, address) {
         expect(
-          ethereumAddressFromPublicKey(hex.decode(publicKey)),
+          ethereumAddressFromPublicKey(
+            Uint8List.fromList(hex.decode(publicKey)),
+          ),
           equals(address),
         );
       });
@@ -76,6 +82,7 @@ void main() {
         "5aaeb6053f3e94c9b9a09f33669435e7ef1beae",
         "5aaeb6053f3e94c9b9a09f33669435e7ef1beaedf",
       ].forEach((address) {
+        print('address $address');
         expect(
           () => checksumEthereumAddress(address),
           throwsA(

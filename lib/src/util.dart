@@ -1,6 +1,7 @@
 import "dart:typed_data";
 
 import "package:pointycastle/ecc/curves/secp256k1.dart";
+import 'package:pointycastle/pointycastle.dart';
 
 String strip0x(String address) {
   if (address.startsWith("0x") || address.startsWith("0X")) {
@@ -21,6 +22,6 @@ Uint8List decompressPublicKey(Uint8List publicKey) {
     throw ArgumentError.value(publicKey, "publicKey", "invalid public key");
   }
 
-  final ecPublicKey = ECCurve_secp256k1().curve.decodePoint(publicKey);
-  return ecPublicKey.getEncoded(false);
+  final ECPoint? ecPublicKey = ECCurve_secp256k1().curve.decodePoint(publicKey);
+  return ecPublicKey!.getEncoded(false);
 }
