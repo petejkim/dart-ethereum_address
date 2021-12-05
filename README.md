@@ -1,10 +1,10 @@
-# ethereum_address
+# ethereum_addresses
 
 ## Usage
 
 ```dart
 import "package:convert/convert.dart" show hex;
-import "package:ethereum_address/ethereum_address.dart";
+import "package:ethereum_addresses/ethereum_addresses.dart";
 
 final publicKey = hex.decode(
   "028a8c59fa27d1e0f1643081ff80c3cf0392902acbf76ab0dc9c414b8d115b0ab3",

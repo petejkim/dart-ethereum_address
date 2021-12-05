@@ -1,3 +1,3 @@
-library ethereum_address;
+library ethereum_addresses;
 
 export "src/address.dart";

@@ -1,7 +1,7 @@
 import 'dart:typed_data';
 
 import "package:convert/convert.dart" show hex;
-import "package:ethereum_address/ethereum_address.dart";
+import "package:ethereum_addresses/ethereum_addresses.dart";
 import "package:test/test.dart";
 
 void main() {
